@@ -49,10 +49,8 @@ int main(int argc, char **argv) {
 	::std::shared_ptr<TProtocolFactory> protocolFactory(new TBinaryProtocolFactory());
 
 	TSimpleServer server(processor, serverTransport, transportFactory, protocolFactory);
-	server.serve();
-
-
 	cout << "start Match Server" << endl;
+	server.serve();
 	return 0;
 }
 
